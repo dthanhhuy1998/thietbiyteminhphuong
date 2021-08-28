@@ -1,0 +1,38 @@
+/* ============================= HEADER ============================= */
+.navDesktop {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    max-height: 60px;
+}
+.navDesktop-logo {
+    max-width: 200px;
+    position: relative;
+}
+.navDesktop-logo img {
+    width: 80px;
+}
+.navDesktop-logo-link {
+    display: block;
+    position: absolute;
+    padding: 10px;
+    margin: 0;
+    top: -20px;
+    left: -20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
+}
+.navbarList {
+    font-family: 'Anton', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+/* ============================= ./end HEADER ============================= */
