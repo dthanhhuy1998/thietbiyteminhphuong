@@ -7,9 +7,10 @@
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon"/>
     <title>Trang chủ - Thiết bị y tế Minh Phương | Demo</title>
 
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- FontAwesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -18,10 +19,11 @@
 <body>
     <div id="app">
         <div class="header">
+            <!-- navDesktop -->
             <div class="navDesktop">
                 <div class="navDesktop-list-left">
                     <ul class="navbarList">
-                        <li><a href="#">Trang Chủ</a></li>
+                        <li class="pr-2"><a href="#">Trang Chủ</a></li>
                         <li><a href="#">Giới thiệu</a></li>
                         <li><a href="#">Sản Phẩm</a></li>
                     </ul>
@@ -30,13 +32,29 @@
                     <a href="#" class="navDesktop-logo-link"><img src="./assets/img/logo.png" alt="logo"></a>
                 </div>
                 <div class="navDesktop-list-right">
-                    <ul class="navbarList">
+                    <ul class="navbarList right">
                         <li><a href="#">Giải pháp y tế</a></li>
                         <li><a href="#">Tin tức</a></li>
                         <li><a href="#">Liên hệ</a></li>
                     </ul>
+                    <div class="phoneButton">
+                        <a class="phoneButton-link" href="tel:0123456789">
+                            <i class="fas fa-phone-alt"></i> 0123.456.789
+                        </a>
+                    </div>
+                    <div class="shoppingCart">
+                        <img src="./assets/img/icons/basket.png" alt="Giỏ hàng">
+                        <span class="shoppingCart-num">0</span>
+                    </div>
                 </div>
             </div>
+            <!-- ./end navDesktop -->
+
+            <!-- slide -->
+            <div class="slide">
+                
+            </div>
+            <!-- ./end slide -->
         </div>
         <div class="content">content</div>
         <div class="footer">footer</div>

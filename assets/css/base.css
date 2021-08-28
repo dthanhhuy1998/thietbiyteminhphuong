@@ -1,8 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'Brandon-bold';
+    src: url('../fonts/brandon/icielBrandonText-Bold.ttf');
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../fonts/open-sans/OpenSans-Bold.ttf');
+}
+@font-face {
+    font-family: 'OpenSans-Extra-Bold';
+    src: url('../fonts/open-sans/OpenSans-ExtraBold.ttf');
+}
 
-/* font-family: 'Anton', sans-serif; */
-/* font-family: 'Kanit', sans-serif; */
+:root {
+    --color-primary: #2980B9;
+    --color-second: #ff0f0b;
+    --color-black: #212A2F;
+    --color-white-thin: #eee;
+    --color-primary-hover: #1F618D;
+    --color-red: #E74C3C;
+}
 
 * {
     padding: 0;
