@@ -1,6 +1,10 @@
 @font-face {
-    font-family: 'Brandon-bold';
-    src: url('../fonts/brandon/icielBrandonText-Bold.ttf');
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/roboto/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Condensed';
+    src: url('../fonts/roboto/Roboto-Condensed.ttf');
 }
 @font-face {
     font-family: 'OpenSans-Bold';
@@ -10,6 +14,10 @@
     font-family: 'OpenSans-Extra-Bold';
     src: url('../fonts/open-sans/OpenSans-ExtraBold.ttf');
 }
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+}
 
 :root {
     --color-primary: #2980B9;
@@ -18,6 +26,7 @@
     --color-white-thin: #eee;
     --color-primary-hover: #1F618D;
     --color-red: #E74C3C;
+    --color-grey-thin: #F7F9F9;
 }
 
 * {
@@ -25,8 +34,42 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'OpenSans-Regular', sans-serif;
     box-sizing: border-box;
-    background-color: #333;
+    background-color: var(--color-grey-thin);
+}
+.pt-48 {
+    padding-top: 48px;
+}
+.spacingFixed {
+    width: 100%;
+    height: 60px;
+}
+.heading {
+    margin-top: 48px;
+    padding-bottom: 48px;
+    text-align: center;
+}
+.heading__title {
+    font-family: 'Roboto-Bold', 'san-serif';
+    font-weight: bold;
+}
+.heading__desc {
+    font-family: 'OpenSans-Regular', sans-serif;
+}
+.badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(241, 196, 15, 0.85);
+    padding: 8px;
+    border-radius: 5px;
+    z-index: 999;
+}
+.categoryProducts {
+    background: #fff;
 }
