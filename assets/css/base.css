@@ -40,7 +40,7 @@ html {
 body {
     font-family: 'OpenSans-Regular', sans-serif;
     box-sizing: border-box;
-    background-color: var(--color-grey-thin);
+    background-color: #FFF;
 }
 .pt-48 {
     padding-top: 48px;
@@ -50,8 +50,8 @@ body {
     height: 60px;
 }
 .heading {
-    margin-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 48px;
+    padding-bottom: 30px;
     text-align: center;
 }
 .heading__title {

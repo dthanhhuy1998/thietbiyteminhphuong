@@ -27,10 +27,56 @@ $(function() {
         margin:10,
         dots:false,
         nav:true,
-        navText : ['<img src="assets/img/icons/chevron-left.png"/>','<img src="assets/img/icons/chevron-right.png"/>'],
+        navText : ['<i class="fas fa-angle-left" style="color: #fff;"></i>','<i class="fas fa-angle-right" style="color: #fff;"></i>'],
         responsive:{
             0:{
                 items:2,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:true
+            },
+            1000:{
+                items:5,
+                nav:true,
+                loop:false
+            }
+        }
+    });
+
+    $(".owl-customer-review").owlCarousel({
+        loop:true,
+        margin:20,
+        dots:false,
+        nav:true,
+        navText : ['<i class="fas fa-angle-left" style="color: #fff;"></i>','<i class="fas fa-angle-right" style="color: #fff;"></i>'],
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:true
+            },
+            1000:{
+                items:3,
+                nav:true,
+                loop:false
+            }
+        }
+    });
+
+    $(".owl-partner").owlCarousel({
+        loop:true,
+        margin:20,
+        dots:false,
+        nav:true,
+        navText : ['<i class="fas fa-angle-left" style="color: #fff;"></i>','<i class="fas fa-angle-right" style="color: #fff;"></i>'],
+        responsive:{
+            0:{
+                items:1,
                 nav:true
             },
             600:{

@@ -24,7 +24,7 @@
     padding: 10px;
     margin: 0;
     top: -20px;
-    left: 50px;
+    left: 65px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 50%;
@@ -202,6 +202,13 @@
     color: #fff;
     background-color: var(--color-primary);
 }
+/* ============================= ./end HEADER ============================= */
+
+/* ============================= CONTENT ============================= */
+.sellingProducts {
+    background: var(--color-grey-thin);
+    padding-bottom: 30px;
+}
 .sellingProducts .nav {
     border-bottom: 2px solid rgb(211, 212, 213);
     justify-content: center;
@@ -294,6 +301,9 @@
     outline: none;
     border: none;
 }
+.categoryProducts {
+    padding-bottom: 30px;
+}
 .categoryProducts-header {
     display: flex;
     justify-content: space-between;
@@ -338,4 +348,264 @@
     color: #fff;
     background: var(--color-primary-hover);
 }
-/* ============================= ./end HEADER ============================= */
+.customerReviews {
+    background-image: url('../img/customer-reviews.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: #FFF;
+    padding-bottom: 30px;
+}
+.customerReview {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.customerReview__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.customerReview__header-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-position: top;
+    background-size: cover;
+}
+.customerReview__header-info {
+    padding-left: 15px;
+}
+.customerReview__header-info-name {
+    font-size: 18px;
+    color: var(--color-primary);
+}
+.customerReview__header-info-pos {
+    font-size: 15px;
+    color: #566573;
+}
+.customerReview__content {
+    font-size: 15px;
+    margin-top: 15px;
+    color: #34495E;
+}
+.owl-customer-review .owl-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.owl-customer-review .owl-nav button.owl-next,
+.owl-customer-review .owl-nav button.owl-prev {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    color: #fff;
+    outline: none;
+    border: none;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+.post {
+    background: var(--color-grey-thin);
+    padding-bottom: 30px;
+}
+.postBox {
+    background: #fff;
+}
+.postBox__content {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.postBox__content-cateName {
+    font-size: 13px;
+    color: #eee;
+    background: var(--color-primary);
+    border-radius: 5px;
+    padding: 8px 15px;
+    text-align: center;
+}
+.postBox__content-title {
+    font-size: 17px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+}
+.postBox__content-title:hover {
+    color: var(--color-primary);
+}
+.postBox__content-desc {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.postBox__bottom {
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.postBox__bottom-time {
+    color: #7B7D7D;
+}
+.btn-view-post {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #222;
+}
+.btn-view-post img {
+    max-width: 22px;
+    margin-left: 3px;
+}
+.btn-view-post:hover {
+    background: #eee;
+}
+.partner {
+    padding-top: 40px;
+}
+.partnerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.partnerBox img {
+    max-width: 150px;
+}
+/* ============================= ./end CONTENT ============================= */
+
+/* ============================= FOOTER ============================= */
+.footer {
+    background: #f5f6fa;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.footer__top {
+    background: #fff;
+    margin: 60px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.policyText {
+    text-align: center;
+    border-right: 1px solid #eee;
+}
+.policyText.border-none {
+    border-color: #fff;
+}
+.policyText h4 {
+    font-size: 14px;
+    color: var(--color-primary);
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+.policyText p {
+    font-size: 13px;
+    color: #566573;
+    padding: 0;
+    margin: 0;
+}
+.footerBox__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footerBox__text {
+    font-size: 15px;
+    color: #707B7C;
+}
+.footerBox__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footerBox__list li a {
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+.footerBox__list li a:hover {
+    color: var(--color-primary);
+}
+.footerBox__register-text {
+    font-size: 15px;
+    color: #707B7C;
+}
+.registerForm {
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+}
+.registerForm input {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 10px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+.registerForm button {
+    padding: 8px;
+    background: var(--color-primary);
+    color: #fff;
+    margin-top: 10px;
+}
+.registerForm button:hover {
+    color: #fff;
+    background: var(--color-primary-hover);
+}
+.copyright {
+    font-size: 14px;
+    color: #eee;
+    background: #333;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+}
+.copyright a {
+    color: #85C1E9;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.copyright a:hover {
+    color: var(--color-primary-hover);
+}
+.social {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+.social li a {
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition:  all 0.3s;
+}
+.social li a:hover {
+    color: var(--color-primary-hover);
+    background: #eee;
+}
+/* ============================= ./end FOOTER ============================= */
