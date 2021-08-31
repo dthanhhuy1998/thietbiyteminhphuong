@@ -16,80 +16,118 @@
     <link rel="stylesheet" href="./assets/vendor/owlcarousel/assets/owl.theme.default.min.css">
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div id="app">
+        <div class="bg-overlay"></div>
         <div class="header">
-            <!-- navDesktop -->
-            <div class="navDesktop">
-                <div class="navDesktop-list-left">
-                    <ul class="navbarList">
-                        <li class="pr-2"><a href="#">Trang Chủ</a></li>
-                        <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Sản Phẩm</a></li>
-                    </ul>
-                </div>
-                <div class="navDesktop-logo">
-                    <a href="#" class="navDesktop-logo-link"><img src="./assets/img/logo.png" alt="logo"></a>
-                </div>
-                <div class="navDesktop-list-right">
-                    <ul class="navbarList right">
-                        <li><a href="#">Giải pháp y tế</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                    <div class="phoneButton">
-                        <a class="phoneButton-link" href="tel:0123456789">
-                            <i class="fas fa-phone-alt"></i> 0123.456.789
-                        </a>
+             <!-- navDesktop -->
+            <div class="xs-hidden">
+                <div class="navDesktop">
+                    <div class="navDesktop-list-left">
+                        <ul class="navbarList">
+                            <li class="pr-2"><a href="#">Trang Chủ</a></li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Sản Phẩm</a></li>
+                        </ul>
                     </div>
-                    <div class="shoppingCart">
-                        <img src="./assets/img/icons/basket.png" alt="Giỏ hàng">
-                        <span class="shoppingCart-num">0</span>
+                    <div class="navDesktop-logo">
+                        <a href="#" class="navDesktop-logo-link"><img src="./assets/img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="navDesktop-list-right">
+                        <ul class="navbarList right">
+                            <li><a href="#">Giải pháp y tế</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                        <ul class="account">
+                            <li class="account__search"><i class="fas fa-search"></i></li>
+                            <li class="account__item"><i class="fas fa-user"></i> Tài khoản <i class="fas fa-caret-down"></i></li>
+                        </ul>
+                        <div class="shoppingCart">
+                            <img src="./assets/img/icons/basket.png" alt="Giỏ hàng">
+                            <span class="shoppingCart-num">0</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- ./end navDesktop -->
-            <div class="spacingFixed"></div>
+            <div class="lg-hidden">
+                <div class="navMobile">
+                    <div class="toggle">
+                        <img class="toggle__image btn-toggle" src="./assets/img/icons/menu-black.png" alt="toggle icon">
+                        <form action="" class="searchMobile">
+                            <input type="text" class="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                            <button type="submit" class="btn btn-search-mb">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="shoppingCart cart-mb">
+                        <img class="shoppingCart__img" src="./assets/img/icons/basket-blue.png" alt="Shopping Cart">
+                        <span class="shoppingCart__qty">0</span>
+                    </div>
+                    <div class="sidebarLeft open">
+                        <div class="sidebarLeft__logo">
+                            <a href="index.html" class="sidebarLeft__logo-img">
+                                <img class="" src="./assets/img/logo.png" alt="logo">
+                            </a>
+                            <div class="btnClose">
+                                <img class="sidebarLeft__logo-close" src="./assets/img/icons/close-black.png" alt="close icon">
+                            </div>
+                        </div>
+                        <div class="sidebarLeft__menu">
+                            <h2 class="sidebarLeft__menu-heading">Menu</h2>
+                            <ul class="sidebarLeft__menu-list">
+                                <li><a class="active" href="#"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                                <li><a href="#"><i class="fas fa-info"></i> Giới Thiệu</a></li>
+                                <li>
+                                    <a href="#">
+                                       <span><i class="fas fa-cubes"></i> Sản Phẩm</span>
+                                        <i class="fas fa-caret-down"></i>
+                                    </a>
+                                    <ul class="sidebarLeft__menu-dropdown">
+                                        <li><a href="#">Chăm sóc cá nhân</a></li>
+                                        <li><a href="#">Vật tư tiêu hao</a></li>
+                                        <li><a href="#">Máy móc và thiết bị gia đình</a></li>
+                                        <li><a href="#">Sản phẩm chống dịch</a></li>
+                                        <li><a href="#">Vật tư y tế</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fas fa-laptop-medical"></i> Giải Pháp Y Tế</a></li>
+                                <li><a href="#"><i class="fas fa-newspaper"></i> Tin Tức</a></li>
+                                <li><a href="#"><i class="fas fa-headset"></i> Liên Hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- navMobile -->
+            <!-- ./end navMobile -->
+            <div class="spacingFixed d-none"></div>
             <!-- slide -->
             <div class="slide">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active" style="background-image: url('./assets/img/slide-1.png');">
                         <div class="carousel-caption">
-                            <div class="carousel-caption-inner">
-                                <h5>Công ty TNHH Thương mại và Kỹ thuật Thiết bị Y tế Minh Phương</h5>
+                            <div class="carousel-caption-text">
+                                <h1>Công ty TNHH Thương mại và Kỹ thuật Thiết bị Y tế Minh Phương</h1>
                                 <p>Chuyên cung cấp các vật tư y tế và thiết bị chính hãng cho bệnh viện, phòng khám và gia đình trên toàn quốc</p>
                             </div>
                         </div>
                       </div>
-                      <div class="carousel-item" style="background-image: url('./assets/img/slide-1.png');">
-                        <div class="carousel-caption">
-                            <div class="carousel-caption-inner">
-                                <h5>Công ty TNHH Thương mại và Kỹ thuật Thiết bị Y tế Minh Phương</h5>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ipsum eaque hic deleniti iure aperiam vel quaerat amet nostrum ea cupiditate, ullam similique sunt accusamus consequatur obcaecati libero dolore deserunt?</p>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item" style="background-image: url('./assets/img/slide-1.png');">
-                        <div class="carousel-caption">
-                            <div class="carousel-caption-inner">
-                                <h5>Công ty TNHH Thương mại và Kỹ thuật Thiết bị Y tế Minh Phương</h5>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ipsum eaque hic deleniti iure aperiam vel quaerat amet nostrum ea cupiditate, ullam similique sunt accusamus consequatur obcaecati libero dolore deserunt?</p>
-                            </div>
-                        </div>
-                      </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> -->
                 </div>
                 <div class="headerButton">
                     <div class="headerButton__inner">
@@ -140,7 +178,7 @@
                                         </a>
                                         <div class="productBox__content-price">
                                             <span class="productBox__content-price-discount">68,000vn<u>đ</u></span>
-                                            <span class="productBox__content-price-price">62,000vn<u>đ</u></span>
+                                            <span class="productBox__content-price-price">202,000vn<u>đ</u></span>
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +282,7 @@
                             <h2 class="categoryProducts__wrap-title">Chăm sóc cá nhân</h2>
                             <a href="#" class="btn btn-view-more">Xem thêm</a>
                         </div>
-                        <div class="owl-carousel owl-category-product">
+                        <div class="owl-carousel owl-selling-product">
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
@@ -348,7 +386,7 @@
                             <h2 class="categoryProducts__wrap-title">Vật tư tiêu hao</h2>
                             <a href="#" class="btn btn-view-more">Xem thêm</a>
                         </div>
-                        <div class="owl-carousel owl-category-product">
+                        <div class="owl-carousel owl-selling-product">
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
@@ -452,7 +490,7 @@
                             <h2 class="categoryProducts__wrap-title">Máy móc và thiết bị gia đình</h2>
                             <a href="#" class="btn btn-view-more">Xem thêm</a>
                         </div>
-                        <div class="owl-carousel owl-category-product">
+                        <div class="owl-carousel owl-selling-product">
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
@@ -556,7 +594,7 @@
                             <h2 class="categoryProducts__wrap-title">Sản phẩm chống dịch</h2>
                             <a href="#" class="btn btn-view-more">Xem thêm</a>
                         </div>
-                        <div class="owl-carousel owl-category-product">
+                        <div class="owl-carousel owl-selling-product">
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
@@ -660,7 +698,7 @@
                             <h2 class="categoryProducts__wrap-title">Vật tư y tế</h2>
                             <a href="#" class="btn btn-view-more">Xem thêm</a>
                         </div>
-                        <div class="owl-carousel owl-category-product">
+                        <div class="owl-carousel owl-selling-product">
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
@@ -926,19 +964,19 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="policyText">
-                                <h4>Miễn Phí Vận Chuyển</h4>
+                                <h4>Cam kết chính hãng</h4>
                                 <p>Miễn phí vận chuyển cho tất cả đơn hàng</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="policyText">
-                                <h4>Hoàn tiền</h4>
+                                <h4>Giá cả cạnh tranh</h4>
                                 <p>Hoàn tiền trong 30 ngày</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="policyText border-none">
-                                <h4>Hỗ trợ trực tuyến</h4>
+                                <h4>Hỗ trợ trực tuyến 24/7</h4>
                                 <p>Hỗ trợ trực tuyến 24h/ngày</p>
                             </div>
                         </div>
@@ -946,7 +984,7 @@
                 </div>
                 <div class="footer__mid">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-12">
                             <div class="footerBox">
                                 <h2 class="footerBox__title">Giới thiệu</h2>
                                 <div class="footerBox__text">
@@ -966,7 +1004,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-6">
                             <div class="footerBox">
                                 <h2 class="footerBox__title">Danh Mục Sản Phẩm</h2>
                                 <ul class="footerBox__list">
@@ -978,7 +1016,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-6">
                             <div class="footerBox">
                                 <h2 class="footerBox__title">Liên Kết Nhanh</h2>
                                 <ul class="footerBox__list">
@@ -991,7 +1029,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-12">
                             <div class="footerBox">
                                 <h2 class="footerBox__title">Đăng ký nhận tin</h2>
                                 <p class="footerBox__register-text">Đăng ký E-mail để cập nhật những tin mới và mã giảm giá.</p>

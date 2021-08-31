@@ -91,3 +91,16 @@ $(function() {
         }
     });
 });
+
+// toggle
+$('.btn-toggle').on('click', function() {
+    $('.bg-overlay').addClass('active');
+    $('.sidebarLeft').addClass('open');
+});
+$('.btnClose').on('click', function() {
+    $('.bg-overlay').removeClass('active');
+    $('.sidebarLeft').removeClass('open');
+});
+$( ".sidebarLeft__menu-list li" ).click(function() {
+    $(this).children('ul').slideToggle(250);
+});

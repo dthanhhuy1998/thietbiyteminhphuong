@@ -126,18 +126,18 @@
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.2);
 }
-.carousel-caption-inner {
+.carousel-caption-text {
     max-width: 1000px;
     height: auto;
 }
-.carousel-caption-inner h5 {
+.carousel-caption-text h1 {
     font-size: 42px;
     letter-spacing: 2px;
     margin-bottom: 20px;
     font-family: 'Roboto-Bold', 'san-serif';
     text-transform: uppercase;
 }
-.carousel-caption-inner p {
+.carousel-caption-text p {
     font-size: 18px;
 }
 .shippingText {
@@ -170,7 +170,7 @@
 .headerButton {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 15vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -479,6 +479,118 @@
 .partnerBox img {
     max-width: 150px;
 }
+.navMobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background: #eee;
+}
+.toggle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    padding: 3px 15px;
+    border-radius: 5px;
+    width: 330px;
+}
+.cart-mb {
+    max-width: 30px;
+}
+.cart-mb img {
+    max-width: 100%;
+}
+.searchMobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.toggle__image {
+    max-width: 30px;
+    margin-right: 15px;
+}
+.searchInput {
+    border: none;
+    outline: none;
+    width: 220px;
+    font-size: 15px;
+}
+.sidebarLeft {
+    position: fixed;
+    top: 0;
+    left: -85%;
+    width: 85%;
+    height: 100%;
+    background-color: #fff;
+    padding: 0 10px;
+    z-index: 999;
+    transition: all 0.5s;
+}
+.sidebarLeft.open {
+    left: 0;
+}
+.sidebarLeft__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebarLeft__logo-img {
+    max-width: 100px;
+    display: block;
+}
+.sidebarLeft__logo-img img {
+    max-width: 100%;
+}
+.btnClose {
+    max-width: 40px;
+}
+.btnClose img {
+    width: 100%;
+}
+.sidebarLeft__menu {
+    padding: 15px 10px;
+}
+.sidebarLeft__menu-heading {
+    font-family: 'Roboto-Bold', 'san-serif';
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #333;
+}
+.sidebarLeft__menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebarLeft__menu-list li {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 10px;
+}
+.sidebarLeft__menu-list li a {
+    transition: all 0.3s;
+}
+.sidebarLeft__menu-list li a:hover,
+.sidebarLeft__menu-list li a.active {
+    color: var(--color-primary);
+}
+.sidebarLeft__menu-list li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+.sidebarLeft__menu-list li a i {
+    width: 22px;
+}
+.sidebarLeft__menu-dropdown {
+    list-style: none;
+    padding-left: 5px;
+    display: none;
+}
+.sidebarLeft__menu-dropdown li {
+    border: none;
+}
 /* ============================= ./end CONTENT ============================= */
 
 /* ============================= FOOTER ============================= */
@@ -607,5 +719,30 @@
 .social li a:hover {
     color: var(--color-primary-hover);
     background: #eee;
+}
+.account {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.account li {
+    margin-right: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.account__item {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 5px 15px;
+    width: 130px;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.account__item:hover {
+    background: var(--color-primary-hover);
 }
 /* ============================= ./end FOOTER ============================= */

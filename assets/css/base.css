@@ -42,6 +42,9 @@ body {
     box-sizing: border-box;
     background-color: #FFF;
 }
+.lg-hidden {
+    display: none;
+}
 .pt-48 {
     padding-top: 48px;
 }
@@ -73,3 +76,19 @@ body {
 .categoryProducts {
     background: #fff;
 }
+.bg-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(41, 128, 185, 0.45);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.bg-overlay.active {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+}
+/* ================ Animate ================ */

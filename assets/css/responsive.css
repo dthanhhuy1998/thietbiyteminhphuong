@@ -1,0 +1,95 @@
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+    .xs-hidden {
+        display: none;
+    }
+    .lg-hidden {
+        display: block;
+    }
+    .carousel-caption-text h1 {
+        font-size: 26px;
+        padding: 0 10px;
+    }
+    .carousel-caption-text p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .carousel-inner {
+        max-height: 80vh;
+    }
+    .carousel-caption {
+        align-items: flex-start;
+        padding-top: 15vh;
+    }
+    .headerButton {
+        padding: 0;
+        bottom: 6vh;
+    }
+    .headerButton__inner {
+        margin-left: 0;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .headerButton__item {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .sellingProducts .nav .nav-item .nav-link {
+        font-size: 14px;
+    }
+    .productBox__content-name-link {
+        font-size: 12px;
+    }
+    .productBox__content {
+        padding: 5px;
+    }
+    .productBox__content-price {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .productBox__content-price-discount {
+        font-size: 13px;
+        text-align: left;
+    }
+    .productBox__content-price-price {
+        font-size: 15px;
+        font-weight: bold;
+        text-align: right;
+    }
+    .heading {
+        padding: 25px 0;
+    }
+    .categoryProducts__wrap-title {
+        font-size: 16px;
+    }
+    .footer__top {
+        margin: 30px 0;
+    }
+    .policyText {
+        border-right: none;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+    .social {
+        padding-top: 5px;
+        padding-bottom: 15px;
+        justify-content: center;
+    }
+    .footerBox {
+        margin-bottom: 15px;
+    }
+    .footerBox__title {
+        font-size: 16px;
+    }
+    .copyright {
+        font-size: 11px;
+    }
+}
