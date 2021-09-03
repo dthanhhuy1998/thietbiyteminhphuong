@@ -4,7 +4,8 @@ $(function() {
         margin:10,
         nav:true,
         dots:false,
-        navText : ['<img src="assets/img/icons/chevron-left.png"/>','<img src="assets/img/icons/chevron-right.png"/>'],
+        lazyLoad: true,
+        navText : ['<i class="fas fa-arrow-left"></i>','<i class="fas fa-arrow-right"></i>'],
         responsive:{
             0:{
                 items:2,
@@ -76,7 +77,7 @@ $(function() {
         navText : ['<i class="fas fa-angle-left" style="color: #fff;"></i>','<i class="fas fa-angle-right" style="color: #fff;"></i>'],
         responsive:{
             0:{
-                items:1,
+                items:2,
                 nav:true
             },
             600:{
@@ -90,6 +91,10 @@ $(function() {
             }
         }
     });
+
+    // Lazyload
+    var myLazyLoad = new LazyLoad();
+    myLazyLoad.update();
 });
 
 // toggle

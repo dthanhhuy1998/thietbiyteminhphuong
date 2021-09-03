@@ -24,7 +24,7 @@
     padding: 10px;
     margin: 0;
     top: -20px;
-    left: 65px;
+    left: -108px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 50%;
@@ -42,10 +42,12 @@
 }
 .navbarList li {
     margin-left: 18px;
+    position: relative;
 }
 .navbarList li a {
     color: var(--color-black);
     text-decoration: none;
+    font-size: 13px;
 }
 .navbarList li a:hover {
     text-decoration: underline;
@@ -57,6 +59,50 @@
 }
 .navbarList.right {
     margin-right: 18px;
+}
+.dropdown {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 320px;
+    height: 0 auto;
+    background-color: #fff;
+    z-index: 999;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    border-top: 4px solid var(--color-primary);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.45s;
+}
+.dropdown:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.dropdown li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dropdown li a {
+    display: block;
+    padding: 8px 15px;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+    color: #566573;
+}
+.navbarList li:hover .dropdown {
+    visibility: visible;
+    left: -10px;
+    top: 28px;
+    opacity: 1;
 }
 .phoneButton {
     max-width: 200px;
@@ -202,6 +248,105 @@
     color: #fff;
     background-color: var(--color-primary);
 }
+.account {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.account li {
+    margin-right: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.account__item {
+    width: 100px;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.account__dropdown {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 250px;
+    height: 0 auto;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.account:hover .account__dropdown {
+    visibility: visible;
+    opacity: 1;
+    top: 25px;
+}
+.account__dropdown h3 {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--color-primary);
+    color: #333;
+    padding: 10px 15px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+.account__dropdown-list {
+    padding: 0;
+    margin: 0;
+}
+.account__dropdown-list li {
+    margin-right: 0;
+}
+.account__dropdown-list li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    color: #333;
+    padding: 8px 10px;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.3s;
+}
+.account__dropdown-list li a:hover {
+    background: #eee;
+}
+.searchFormDesktop {
+    width: 350px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.searchFormDesktop input {
+    border: none;
+    outline: none;
+    padding: 3px 10px;
+    font-size: 14px;
+}
+.searchFormDesktop button {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+}
+.searchFormDesktop button:hover {
+    background-color: var(--color-primary-hover);
+}
 /* ============================= ./end HEADER ============================= */
 
 /* ============================= CONTENT ============================= */
@@ -247,6 +392,43 @@
     left: 0;
     z-index: 9;
 }
+.productBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productBtn-btn {
+    width: 0;
+    height: 0;
+    background:  var(--color-primary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    opacity: 0;
+}
+.productBtn-btn:hover {
+    background:  #fff;
+    color: var(--color-primary);
+}
+.productBtn-btn.btn-quick-view {
+    margin-right: 10px;
+}
+.productBtn:hover .productBtn-btn {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+}
 .productBox__content {
     padding: 10px;
 }
@@ -264,7 +446,7 @@
 .productBox .img-overlay {
     transition: all 0.3s;
 }
-.productBox:hover .productBox__image > img {
+.productBox:hover .productBox__image img {
     transform: scale(1.3);
 }
 .productBox:hover .img-overlay {
@@ -284,13 +466,11 @@
     color: var(--color-primary-hover);
 }
 .owl-selling-product .owl-nav {
-    position: absolute;
-    left: 0;
-    top: 32%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 .owl-selling-product .owl-nav button.owl-next,
 .owl-selling-product .owl-nav button.owl-prev {
@@ -300,6 +480,7 @@
     color: #fff;
     outline: none;
     border: none;
+    margin-right: 10px;
 }
 .categoryProducts {
     padding-bottom: 30px;
@@ -310,7 +491,6 @@
     align-items: center;
     padding-bottom: 5px;
     margin-bottom: 15px;
-    margin-top: 30px;
     border-bottom: 2px solid #eaebee;
 }
 .categoryProducts__wrap-title {
@@ -619,6 +799,7 @@
     padding: 0;
     margin: 0;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 .policyText p {
     font-size: 13px;
@@ -719,30 +900,5 @@
 .social li a:hover {
     color: var(--color-primary-hover);
     background: #eee;
-}
-.account {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.account li {
-    margin-right: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.account__item {
-    background: var(--color-primary);
-    color: #fff;
-    padding: 5px 15px;
-    width: 130px;
-    font-size: 15px;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-.account__item:hover {
-    background: var(--color-primary-hover);
 }
 /* ============================= ./end FOOTER ============================= */

@@ -28,26 +28,47 @@
                 <div class="navDesktop">
                     <div class="navDesktop-list-left">
                         <ul class="navbarList">
-                            <li class="pr-2"><a href="#">Trang Chủ</a></li>
-                            <li><a href="#">Giới thiệu</a></li>
-                            <li><a href="#">Sản Phẩm</a></li>
+                            <li class="pr-2"><a href="#"><i class="fas fa-home"></i> </a></li>
+                            <li><a href="#">Giới Thiệu</a></li>
+                            <li>
+                                <a href="#">Sản Phẩm <i class="fas fa-angle-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Chăm sóc cá nhân</a></li>
+                                    <li><a href="#">Vật tư tiêu hao</a></li>
+                                    <li><a href="#">Máy móc và thiết bị gia đình</a></li>
+                                    <li><a href="#">Sản phẩm chống dịch</a></li>
+                                    <li><a href="#">Vật tư y té</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Y tế gia đình</a></li>
+                            <li><a href="#">Bệnh viện, phòng khám</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="#">Liên hệ</a></li>
                         </ul>
                     </div>
                     <div class="navDesktop-logo">
                         <a href="#" class="navDesktop-logo-link"><img src="./assets/img/logo.png" alt="logo"></a>
                     </div>
                     <div class="navDesktop-list-right">
-                        <ul class="navbarList right">
-                            <li><a href="#">Giải pháp y tế</a></li>
-                            <li><a href="#">Tin tức</a></li>
-                            <li><a href="#">Liên hệ</a></li>
-                        </ul>
+                        <form class="searchFormDesktop" action="">
+                            <input type="text" placeholder="Nhập sản phẩm cần tìm..">
+                            <button type="submit">Tìm kiếm</button>
+                        </form>
                         <ul class="account">
-                            <li class="account__search"><i class="fas fa-search"></i></li>
                             <li class="account__item"><i class="fas fa-user"></i> Tài khoản <i class="fas fa-caret-down"></i></li>
+                            <div class="account__dropdown">
+                                <h3>Thông tin tài khoản</h3>
+                                <ul class="account__dropdown-list">
+                                    <li><a href="#" onclick="return false;">Chào, TBYT Minh Phương!</a></li>
+                                    <li><a href="#"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
+                                    <li><a href="#"><i class="fas fa-edit"></i> Đăng ký</a></li>
+                                    <li><a href="#"><i class="fas fa-user"></i> Thông tin tài khoản</a></li>
+                                    <li><a href="#"><i class="fas fa-lock"></i> Đăng xuất</a></li>
+                                </ul>
+                            </div>
                         </ul>
                         <div class="shoppingCart">
-                            <img src="./assets/img/icons/basket.png" alt="Giỏ hàng">
+                            <img src="./assets/img/icons/basket-blue.png" alt="Giỏ hàng">
                             <span class="shoppingCart-num">0</span>
                         </div>
                     </div>
@@ -81,11 +102,11 @@
                         <div class="sidebarLeft__menu">
                             <h2 class="sidebarLeft__menu-heading">Menu</h2>
                             <ul class="sidebarLeft__menu-list">
-                                <li><a class="active" href="#"><i class="fas fa-home"></i> Trang Chủ</a></li>
-                                <li><a href="#"><i class="fas fa-info"></i> Giới Thiệu</a></li>
+                                <li><a class="active" href="#"><i class="fas fa-minus"></i> Trang Chủ</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Giới Thiệu</a></li>
                                 <li>
                                     <a href="#">
-                                       <span><i class="fas fa-cubes"></i> Sản Phẩm</span>
+                                       <span><i class="fas fa-minus"></i> Sản Phẩm</span>
                                         <i class="fas fa-caret-down"></i>
                                     </a>
                                     <ul class="sidebarLeft__menu-dropdown">
@@ -96,9 +117,10 @@
                                         <li><a href="#">Vật tư y tế</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#"><i class="fas fa-laptop-medical"></i> Giải Pháp Y Tế</a></li>
-                                <li><a href="#"><i class="fas fa-newspaper"></i> Tin Tức</a></li>
-                                <li><a href="#"><i class="fas fa-headset"></i> Liên Hệ</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Y Tế gia đình</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Bệnh viện, phòng khám</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Tin Tức</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Liên Hệ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -131,7 +153,7 @@
                 </div>
                 <div class="headerButton">
                     <div class="headerButton__inner">
-                        <a class="headerButton__item mr" href="#">MUA SẮM GIA ĐÌNH</a>
+                        <a class="headerButton__item mr" href="#">VẬT TƯ Y TẾ GIA ĐÌNH</a>
                         <a class="headerButton__item" href="#">BỆNH VIỆN, PHÒNG KHÁM</a>
                     </div>
                 </div>
@@ -169,8 +191,12 @@
                                 <div class="productBox">
                                     <span class="badge badge-sale">Giảm 20%</span>
                                     <div class="productBox__image">
-                                        <img src="./assets/img/product1.jfif" alt="">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product1.jfif" src="./assets/img/lazyload.jpg" />
                                         <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
                                     <div class="productBox__content">
                                         <a class="productBox__content-name-link" href="#">
@@ -185,8 +211,12 @@
                                 <div class="productBox">
                                     <span class="badge badge-sale">Giảm 20%</span>
                                     <div class="productBox__image">
-                                        <img src="./assets/img/product2.jfif" alt="">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product2.jfif" src="./assets/img/lazyload.jpg" />
                                         <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
                                     <div class="productBox__content">
                                         <a class="productBox__content-name-link" href="#">
@@ -201,8 +231,12 @@
                                 <div class="productBox">
                                     <span class="badge badge-sale">Giảm 20%</span>
                                     <div class="productBox__image">
-                                        <img src="./assets/img/product3.jfif" alt="">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product3.jfif" src="./assets/img/lazyload.jpg" />
                                         <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
                                     <div class="productBox__content">
                                         <a class="productBox__content-name-link" href="#">
@@ -217,8 +251,12 @@
                                 <div class="productBox">
                                     <span class="badge badge-sale">Giảm 20%</span>
                                     <div class="productBox__image">
-                                        <img src="./assets/img/product4.jfif" alt="">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product4.jfif" src="./assets/img/lazyload.jpg" />
                                         <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
                                     <div class="productBox__content">
                                         <a class="productBox__content-name-link" href="#">
@@ -233,8 +271,12 @@
                                 <div class="productBox">
                                     <span class="badge badge-sale">Giảm 20%</span>
                                     <div class="productBox__image">
-                                        <img src="./assets/img/product5.jfif" alt="">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product5.jfif" src="./assets/img/lazyload.jpg" />
                                         <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
                                     <div class="productBox__content">
                                         <a class="productBox__content-name-link" href="#">
@@ -249,8 +291,12 @@
                                 <div class="productBox">
                                     <span class="badge badge-sale">Giảm 20%</span>
                                     <div class="productBox__image">
-                                        <img src="./assets/img/product6.jfif" alt="">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product6.jfif" src="./assets/img/lazyload.jpg" />
                                         <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
                                     <div class="productBox__content">
                                         <a class="productBox__content-name-link" href="#">
@@ -284,42 +330,54 @@
                         </div>
                         <div class="owl-carousel owl-selling-product">
                             <div class="productBox">
-                                <span class="badge badge-sale">Giảm 20%</span>
-                                <div class="productBox__image">
-                                    <img src="./assets/img/product1.jfif" alt="">
-                                    <div class="img-overlay"></div>
-                                </div>
-                                <div class="productBox__content">
-                                    <a class="productBox__content-name-link" href="#">
-                                        Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
-                                    </a>
-                                    <div class="productBox__content-price">
-                                        <span class="productBox__content-price-discount">68,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">62,000vn<u>đ</u></span>
+                                    <span class="badge badge-sale">Giảm 20%</span>
+                                    <div class="productBox__image">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product1.jfif" src="./assets/img/lazyload.jpg" />
+                                        <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="productBox__content">
+                                        <a class="productBox__content-name-link" href="#">
+                                            Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
+                                        </a>
+                                        <div class="productBox__content-price">
+                                            <span class="productBox__content-price-discount">68,000vn<u>đ</u></span>
+                                            <span class="productBox__content-price-price">202,000vn<u>đ</u></span>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="productBox">
+                                    <span class="badge badge-sale">Giảm 20%</span>
+                                    <div class="productBox__image">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product2.jfif" src="./assets/img/lazyload.jpg" />
+                                        <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="productBox__content">
+                                        <a class="productBox__content-name-link" href="#">
+                                            Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
+                                        </a>
+                                        <div class="productBox__content-price">
+                                            <span class="productBox__content-price-discount">520,000vn<u>đ</u></span>
+                                            <span class="productBox__content-price-price">515,000vn<u>đ</u></span>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product2.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product3.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
-                                </div>
-                                <div class="productBox__content">
-                                    <a class="productBox__content-name-link" href="#">
-                                        Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
-                                    </a>
-                                    <div class="productBox__content-price">
-                                        <span class="productBox__content-price-discount">520,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">515,000vn<u>đ</u></span>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="productBox">
-                                <span class="badge badge-sale">Giảm 20%</span>
-                                <div class="productBox__image">
-                                    <img src="./assets/img/product3.jfif" alt="">
-                                    <div class="img-overlay"></div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -334,8 +392,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product4.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product4.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -350,8 +412,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product5.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product5.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -366,8 +432,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product6.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product6.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -390,8 +460,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product1.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product1.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -399,15 +473,19 @@
                                     </a>
                                     <div class="productBox__content-price">
                                         <span class="productBox__content-price-discount">68,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">62,000vn<u>đ</u></span>
+                                        <span class="productBox__content-price-price">202,000vn<u>đ</u></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product2.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product2.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -422,8 +500,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product3.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product3.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -438,8 +520,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product4.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product4.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -454,8 +540,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product5.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product5.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -470,8 +560,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product6.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product6.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -494,8 +588,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product1.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product1.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -503,31 +601,39 @@
                                     </a>
                                     <div class="productBox__content-price">
                                         <span class="productBox__content-price-discount">68,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">62,000vn<u>đ</u></span>
+                                        <span class="productBox__content-price-price">202,000vn<u>đ</u></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="productBox">
-                                <span class="badge badge-sale">Giảm 20%</span>
-                                <div class="productBox__image">
-                                    <img src="./assets/img/product2.jfif" alt="">
-                                    <div class="img-overlay"></div>
-                                </div>
-                                <div class="productBox__content">
-                                    <a class="productBox__content-name-link" href="#">
-                                        Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
-                                    </a>
-                                    <div class="productBox__content-price">
-                                        <span class="productBox__content-price-discount">520,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">515,000vn<u>đ</u></span>
+                                    <span class="badge badge-sale">Giảm 20%</span>
+                                    <div class="productBox__image">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product2.jfif" src="./assets/img/lazyload.jpg" />
+                                        <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="productBox__content">
+                                        <a class="productBox__content-name-link" href="#">
+                                            Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
+                                        </a>
+                                        <div class="productBox__content-price">
+                                            <span class="productBox__content-price-discount">520,000vn<u>đ</u></span>
+                                            <span class="productBox__content-price-price">515,000vn<u>đ</u></span>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product3.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product3.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -542,8 +648,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product4.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product4.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -558,8 +668,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product5.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product5.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -574,8 +688,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product6.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product6.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -598,8 +716,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product1.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product1.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -607,31 +729,39 @@
                                     </a>
                                     <div class="productBox__content-price">
                                         <span class="productBox__content-price-discount">68,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">62,000vn<u>đ</u></span>
+                                        <span class="productBox__content-price-price">202,000vn<u>đ</u></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="productBox">
-                                <span class="badge badge-sale">Giảm 20%</span>
-                                <div class="productBox__image">
-                                    <img src="./assets/img/product2.jfif" alt="">
-                                    <div class="img-overlay"></div>
-                                </div>
-                                <div class="productBox__content">
-                                    <a class="productBox__content-name-link" href="#">
-                                        Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
-                                    </a>
-                                    <div class="productBox__content-price">
-                                        <span class="productBox__content-price-discount">520,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">515,000vn<u>đ</u></span>
+                                    <span class="badge badge-sale">Giảm 20%</span>
+                                    <div class="productBox__image">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product2.jfif" src="./assets/img/lazyload.jpg" />
+                                        <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="productBox__content">
+                                        <a class="productBox__content-name-link" href="#">
+                                            Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
+                                        </a>
+                                        <div class="productBox__content-price">
+                                            <span class="productBox__content-price-discount">520,000vn<u>đ</u></span>
+                                            <span class="productBox__content-price-price">515,000vn<u>đ</u></span>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product3.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product3.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -646,8 +776,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product4.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product4.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -662,8 +796,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product5.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product5.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -678,8 +816,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product6.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product6.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -702,8 +844,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product1.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product1.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -711,31 +857,39 @@
                                     </a>
                                     <div class="productBox__content-price">
                                         <span class="productBox__content-price-discount">68,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">62,000vn<u>đ</u></span>
+                                        <span class="productBox__content-price-price">202,000vn<u>đ</u></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="productBox">
-                                <span class="badge badge-sale">Giảm 20%</span>
-                                <div class="productBox__image">
-                                    <img src="./assets/img/product2.jfif" alt="">
-                                    <div class="img-overlay"></div>
-                                </div>
-                                <div class="productBox__content">
-                                    <a class="productBox__content-name-link" href="#">
-                                        Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
-                                    </a>
-                                    <div class="productBox__content-price">
-                                        <span class="productBox__content-price-discount">520,000vn<u>đ</u></span>
-                                        <span class="productBox__content-price-price">515,000vn<u>đ</u></span>
+                                    <span class="badge badge-sale">Giảm 20%</span>
+                                    <div class="productBox__image">
+                                        <img alt="A lazy image" class="lazy" data-src="./assets/img/product2.jfif" src="./assets/img/lazyload.jpg" />
+                                        <div class="img-overlay"></div>
+                                        <div class="productBtn">
+                                            <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                            <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="productBox__content">
+                                        <a class="productBox__content-name-link" href="#">
+                                            Băng dính cuộn URGO vải lụa y tế 2.5cm x 5m và 5cm x 5m
+                                        </a>
+                                        <div class="productBox__content-price">
+                                            <span class="productBox__content-price-discount">520,000vn<u>đ</u></span>
+                                            <span class="productBox__content-price-price">515,000vn<u>đ</u></span>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product3.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product3.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -750,8 +904,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product4.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product4.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -766,8 +924,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product5.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product5.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -782,8 +944,12 @@
                             <div class="productBox">
                                 <span class="badge badge-sale">Giảm 20%</span>
                                 <div class="productBox__image">
-                                    <img src="./assets/img/product6.jfif" alt="">
+                                    <img alt="A lazy image" class="lazy" data-src="./assets/img/product6.jfif" src="./assets/img/lazyload.jpg" />
                                     <div class="img-overlay"></div>
+                                    <div class="productBtn">
+                                        <a title="Xem nhanh" href="#" class="productBtn-btn btn-quick-view"><i class="fas fa-eye"></i></a>
+                                        <a title="Thêm vào giỏ hàng" href="#" class="productBtn-btn btn-add-cart"><i class="fas fa-shopping-basket"></i></a>
+                                    </div>
                                 </div>
                                 <div class="productBox__content">
                                     <a class="productBox__content-name-link" href="#">
@@ -939,19 +1105,22 @@
                 <div class="container">
                     <div class="owl-carousel owl-partner">
                         <div class="partnerBox">
-                            <img src="./assets/img/brand-logo-1.png" alt="logo-brand">
+                            <img src="./assets/img/partner/logo1.png" alt="logo-brand">
                         </div>
                         <div class="partnerBox">
-                            <img src="./assets/img/brand-logo-2.png" alt="logo-brand">
+                            <img src="./assets/img/partner/logo2.png" alt="logo-brand">
                         </div>
                         <div class="partnerBox">
-                            <img src="./assets/img/brand-logo-3.png" alt="logo-brand">
+                            <img src="./assets/img/partner/logo3.png" alt="logo-brand">
                         </div>
                         <div class="partnerBox">
-                            <img src="./assets/img/brand-logo-4.png" alt="logo-brand">
+                            <img src="./assets/img/partner/logo4.png" alt="logo-brand">
                         </div>
                         <div class="partnerBox">
-                            <img src="./assets/img/brand-logo-5.png" alt="logo-brand">
+                            <img src="./assets/img/partner/logo5.png" alt="logo-brand">
+                        </div>
+                        <div class="partnerBox">
+                            <img src="./assets/img/partner/logo6.png" alt="logo-brand">
                         </div>
                     </div>
                 </div>
@@ -965,19 +1134,19 @@
                         <div class="col-md-4">
                             <div class="policyText">
                                 <h4>Cam kết chính hãng</h4>
-                                <p>Miễn phí vận chuyển cho tất cả đơn hàng</p>
+                                <p>Cung cấp sản phẩm chính hãng và tốt nhất đến tay khách hàng</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="policyText">
                                 <h4>Giá cả cạnh tranh</h4>
-                                <p>Hoàn tiền trong 30 ngày</p>
+                                <p>Giá cả hợp lý nhất trên thị trường và trong ngành thiết bị y tế</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="policyText border-none">
                                 <h4>Hỗ trợ trực tuyến 24/7</h4>
-                                <p>Hỗ trợ trực tuyến 24h/ngày</p>
+                                <p>Đội ngũ giàu kinh nghiệm sẵn sàng phục vụ quý khách</p>
                             </div>
                         </div>
                     </div>
@@ -1021,11 +1190,11 @@
                                 <h2 class="footerBox__title">Liên Kết Nhanh</h2>
                                 <ul class="footerBox__list">
                                     <li><a href="#">Giới thiệu</a></li>
-                                    <li><a href="#">Chính sách vận chuyển</a></li>
-                                    <li><a href="#">Bảo mật</a></li>
-                                    <li><a href="#">Điều khoản và điều kiện</a></li>
-                                    <li><a href="#">Dịch vụ khách hàng</a></li>
-                                    <li><a href="#">Chính sách đổi trả</a></li>
+                                    <li><a href="#">Sản phẩm</a></li>
+                                    <li><a href="#">Vật tư y tế gia đình</a></li>
+                                    <li><a href="#">Vật tư BV, PK</a></li>
+                                    <li><a href="#">Tin tức</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1056,6 +1225,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Owl Carousel 2 -->
     <script src="./assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+    <!--Lazyload -->
+    <script src="./assets/vendor/js/lazyload.min.js"></script>
     <!-- Script -->
     <script src="./assets/js/main.js"></script>
 </body>
