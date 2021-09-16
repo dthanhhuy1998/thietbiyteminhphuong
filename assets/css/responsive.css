@@ -92,4 +92,26 @@
     .copyright {
         font-size: 11px;
     }
+    .flex-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+    .title-post {
+        align-items: center;
+        padding-top: 20px;
+    }
+    .slide-blog .title-post h1 {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+    .articleList .postBox {
+        width: 100%;
+        margin-right: 0;
+    }
+    .productCenter__left,
+    .productCenter__right {
+        width: 100%;
+    }
+    .cardProduct__head h3 {
+        font-size: 16px;
+    }
 }

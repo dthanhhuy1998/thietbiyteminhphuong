@@ -7,6 +7,12 @@
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon"/>
     <title>Trang chủ - THIẾT BỊ Y TẾ MINH PHƯƠNG | Demo</title>
 
+    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!-- FontAwesome 5.15.4 -->
@@ -20,6 +26,11 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="L5v6umPg"></script>
+
+
     <div id="app">
         <div class="bg-overlay"></div>
         <div class="header">
@@ -42,7 +53,7 @@
                             </li>
                             <li><a href="#">Y tế gia đình</a></li>
                             <li><a href="#">Bệnh viện, phòng khám</a></li>
-                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="articles.html">Tin tức</a></li>
                             <li><a href="#">Liên hệ</a></li>
                         </ul>
                     </div>
@@ -75,6 +86,7 @@
                 </div>
             </div>
             <!-- ./end navDesktop -->
+            <!-- navMobile -->
             <div class="lg-hidden">
                 <div class="navMobile">
                     <div class="toggle">
@@ -119,14 +131,13 @@
                                 </li>
                                 <li><a href="#"><i class="fas fa-minus"></i> Y Tế gia đình</a></li>
                                 <li><a href="#"><i class="fas fa-minus"></i> Bệnh viện, phòng khám</a></li>
-                                <li><a href="#"><i class="fas fa-minus"></i> Tin Tức</a></li>
+                                <li><a href="articles.html"><i class="fas fa-minus"></i> Tin Tức</a></li>
                                 <li><a href="#"><i class="fas fa-minus"></i> Liên Hệ</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- navMobile -->
             <!-- ./end navMobile -->
             <div class="spacingFixed d-none"></div>
             <!-- slide -->

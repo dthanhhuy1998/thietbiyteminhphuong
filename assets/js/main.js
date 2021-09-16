@@ -106,6 +106,38 @@ $('.btnClose').on('click', function() {
     $('.bg-overlay').removeClass('active');
     $('.sidebarLeft').removeClass('open');
 });
+
+// Sidebar mobile
 $( ".sidebarLeft__menu-list li" ).click(function() {
     $(this).children('ul').slideToggle(250);
+});
+
+// Sidebar
+$( ".sidebar__item-list li" ).click(function() {
+    $(this).children('ul').slideToggle(250);
+});
+
+// Swiper Slide
+var swiper = new Swiper(".sub-swiper", {
+    loop: false,
+    spaceBetween: 10,
+    slidesPerView: 5,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+});
+var swiper2 = new Swiper(".main-swiper", {
+    loop: false,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
 });

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon"/>
+    <title>Trang chủ - THIẾT BỊ Y TẾ MINH PHƯƠNG | Demo</title>
+
+    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- FontAwesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Owl Carousel 2 -->
+    <link rel="stylesheet" href="./assets/vendor/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/vendor/owlcarousel/assets/owl.theme.default.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="L5v6umPg"></script>
+
+    <div id="app">
+        <div class="bg-overlay"></div>
+        <div class="header">
+             <!-- navDesktop -->
+            <div class="xs-hidden">
+                <div class="navDesktop">
+                    <div class="navDesktop-list-left">
+                        <ul class="navbarList">
+                            <li class="pr-2"><a href="#"><i class="fas fa-home"></i> </a></li>
+                            <li><a href="#">Giới Thiệu</a></li>
+                            <li>
+                                <a href="#">Sản Phẩm <i class="fas fa-angle-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Chăm sóc cá nhân</a></li>
+                                    <li><a href="#">Vật tư tiêu hao</a></li>
+                                    <li><a href="#">Máy móc và thiết bị gia đình</a></li>
+                                    <li><a href="#">Sản phẩm chống dịch</a></li>
+                                    <li><a href="#">Vật tư y té</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Y tế gia đình</a></li>
+                            <li><a href="#">Bệnh viện, phòng khám</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="navDesktop-logo">
+                        <a href="#" class="navDesktop-logo-link"><img src="./assets/img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="navDesktop-list-right">
+                        <form class="searchFormDesktop" action="">
+                            <input type="text" placeholder="Nhập sản phẩm cần tìm..">
+                            <button type="submit">Tìm kiếm</button>
+                        </form>
+                        <ul class="account">
+                            <li class="account__item"><i class="fas fa-user"></i> Tài khoản <i class="fas fa-caret-down"></i></li>
+                            <div class="account__dropdown">
+                                <h3>Thông tin tài khoản</h3>
+                                <ul class="account__dropdown-list">
+                                    <li><a href="#" onclick="return false;">Chào, TBYT Minh Phương!</a></li>
+                                    <li><a href="#"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
+                                    <li><a href="#"><i class="fas fa-edit"></i> Đăng ký</a></li>
+                                    <li><a href="#"><i class="fas fa-user"></i> Thông tin tài khoản</a></li>
+                                    <li><a href="#"><i class="fas fa-lock"></i> Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <div class="shoppingCart">
+                            <img src="./assets/img/icons/basket-blue.png" alt="Giỏ hàng">
+                            <span class="shoppingCart-num">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./end navDesktop -->
+            <!-- navMobile -->
+            <div class="lg-hidden">
+                <div class="navMobile">
+                    <div class="toggle">
+                        <img class="toggle__image btn-toggle" src="./assets/img/icons/menu-black.png" alt="toggle icon">
+                        <form action="" class="searchMobile">
+                            <input type="text" class="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                            <button type="submit" class="btn btn-search-mb">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="shoppingCart cart-mb">
+                        <img class="shoppingCart__img" src="./assets/img/icons/basket-blue.png" alt="Shopping Cart">
+                        <span class="shoppingCart__qty">0</span>
+                    </div>
+                    <div class="sidebarLeft">
+                        <div class="sidebarLeft__logo">
+                            <a href="index.html" class="sidebarLeft__logo-img">
+                                <img class="" src="./assets/img/logo.png" alt="logo">
+                            </a>
+                            <div class="btnClose">
+                                <img class="sidebarLeft__logo-close" src="./assets/img/icons/close-black.png" alt="close icon">
+                            </div>
+                        </div>
+                        <div class="sidebarLeft__menu">
+                            <h2 class="sidebarLeft__menu-heading">Menu</h2>
+                            <ul class="sidebarLeft__menu-list">
+                                <li><a class="active" href="#"><i class="fas fa-minus"></i> Trang Chủ</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Giới Thiệu</a></li>
+                                <li>
+                                    <a href="#">
+                                       <span><i class="fas fa-minus"></i> Sản Phẩm</span>
+                                        <i class="fas fa-caret-down"></i>
+                                    </a>
+                                    <ul class="sidebarLeft__menu-dropdown">
+                                        <li><a href="#">Chăm sóc cá nhân</a></li>
+                                        <li><a href="#">Vật tư tiêu hao</a></li>
+                                        <li><a href="#">Máy móc và thiết bị gia đình</a></li>
+                                        <li><a href="#">Sản phẩm chống dịch</a></li>
+                                        <li><a href="#">Vật tư y tế</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Y Tế gia đình</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Bệnh viện, phòng khám</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Tin Tức</a></li>
+                                <li><a href="#"><i class="fas fa-minus"></i> Liên Hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./end navMobile -->
+            <div class="spacingFixed xs-hidden"></div>
+        </div>
+        <div class="content">
+            <!-- Title -->
+            <div class="slide">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner slide-blog">
+                        <div class="carousel-item active" style="background-image: url('./assets/img/bg1.jpg');">
+                        <div class="carousel-caption title-post">
+                            <div class="carousel-caption-text">
+                                <h1>Một Phút Đứng 1 Chân Mỗi Ngày, Tác Động Kỳ Diệu Đến Sức Khỏe Thế Nào?</h1>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./end Title -->
+            <nav class="breadcrumb__wrap">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="#">Tin tức</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Một Phút Đứng 1 Chân Mỗi Ngày, Tác Động Kỳ Diệu Đến Sức Khỏe Thế Nào?</li>
+                    </ol>
+                </div>
+            </nav>
+            <div class="article-wrap">
+                <div class="container">
+                    <div class="row flex-wrap-reverse">
+                        <div class="col-md-3">
+                            <div class="sidebar">
+                                <div class="sidebar__item">
+                                    <h3 class="sidebar__item-title">Danh mục</h3>
+                                    <ul class="sidebar__item-list">
+                                        <li>
+                                            <a href="#" onclick="return false;">
+                                                <span>Chăm sóc sức khỏe gia đình</span>
+                                                <span><i class="fas fa-angle-down"></i></span>
+                                            </a>
+                                            <ul class="sidebar__dropdown" style="display: block;">
+                                                <li><a href="#">Máy đo huyết áp</a></li>
+                                                <li><a href="#">Máy đo đường huyết</a></li>
+                                                <li><a href="#">Máy xông mũi họng</a></li>
+                                                <li><a href="#">Nhiệt kế</a></li>
+                                                <li><a href="#">Cân điện tử</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick="return false;">
+                                                <span>Giường y tế</span>
+                                                <span><i class="fas fa-angle-down"></i></span>
+                                            </a>
+                                            <ul class="sidebar__dropdown">
+                                                <li><a href="#">Giường y tế inox</a></li>
+                                                <li><a href="#">Giường bệnh nhân đa chức năng</a></li>
+                                                <li><a href="#">Tủ đầu giường</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick="return false;">
+                                                <span>Trang thiết bị chuyên dụng</span>
+                                                <span><i class="fas fa-angle-down"></i></span>
+                                            </a>
+                                            <ul class="sidebar__dropdown">
+                                                <li><a href="#">Thiết bị phòng ngủ</a></li>
+                                                <li><a href="#">Máy nghe tim thai</a></li>
+                                                <li><a href="#">Nồi hấp - Tủ sấy</a></li>
+                                                <li><a href="#">Dụng cụ thăm khám</a></li>
+                                                <li><a href="#">Máy châm cứu</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Máy vật lý trị liệu</a></li>
+                                        <li><a href="#">Thiết bị thoát hiểm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar__item">
+                                    <h3 class="sidebar__item-title with-border">Tin tức liên quan</h3>
+                                    <ul class="news">
+                                        <li class="news__item">
+                                            <a href="#" class="news__item-link">
+                                                <div class="news__item-image">
+                                                    <img src="https://moh.gov.vn/image/journal/article?img_id=1065504" alt="">
+                                                </div>
+                                                <div class="news__item-content">
+                                                    <h3 class="news__item-content-title">
+                                                        Sáng 13/9: Gần 374.600 bệnh nhân COVID-19 đã khỏi..
+                                                    </h3>
+                                                    <span class="news__item-content-time">Ngày 13 tháng 09 năm 2021</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="news__item">
+                                            <a href="#" class="news__item-link">
+                                                <div class="news__item-image">
+                                                    <img src="https://moh.gov.vn/image/journal/article?img_id=1065224" alt="">
+                                                </div>
+                                                <div class="news__item-content">
+                                                    <h3 class="news__item-content-title">
+                                                        Ngày 12/9: Thêm 11.478 ca mắc COVID-19, riêng TP HCM...
+                                                    </h3>
+                                                    <span class="news__item-content-time">Ngày 13 tháng 09 năm 2021</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="news__item">
+                                            <a href="#" class="news__item-link">
+                                                <div class="news__item-image">
+                                                    <img src="https://moh.gov.vn/image/journal/article?img_id=1065604" alt="">
+                                                </div>
+                                                <div class="news__item-content">
+                                                    <h3 class="news__item-content-title">
+                                                        Thầy giáo trường y nén đau thương chịu tang mẹ..
+                                                    </h3>
+                                                    <span class="news__item-content-time">Ngày 13 tháng 09 năm 2021</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar__item">
+                                    <h3 class="sidebar__item-title padding-tag">Tag</h3>
+                                    <ul class="tag">
+                                        <li><a href="#">Thiết bị</a></li>
+                                        <li><a href="#">Y tế</a></li>
+                                        <li><a href="#">Tin tức mới nhất</a></li>
+                                        <li><a href="#">Minh Phương </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="article-content">
+                                <img class="w-100" src="http://tpl.gco.vn/du-an-cong-ty/kho2018/web-phu-kien/devita-medical/assets/img/blog/blog-details.jpg" alt="">
+                                <h4 class="mt-3" style="font-weight: bold;">MỘT PHÚT ĐỨNG 1 CHÂN MỖI NGÀY, TÁC ĐỘNG KỲ DIỆU ĐẾN SỨC KHỎE THẾ NÀO?</h4>
+                                <span class="created-at" class="my-3">Ngày 12 tháng 09 năm 2021</span>
+                                <p class="mt-3" align="justify" style="font-size: 15px; font-weight: bold;">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusod tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ull laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute irure dolor in reprhen voluptate velit esse cillum dolore eu fugiat to nulla pariatur. Excepteur sint
+                                    occaecat cupidatat non proident, sunt in culpa qei officia deser mollit anim id est to laborum sed ut perspiciatis.
+                                </p>
+                                <p align="justify" style="font-size: 15px;">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusod tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ull laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute irure dolor in reprhen voluptate velit esse cillum dolore eu fugiat to nulla pariatur. Excepteur sint
+                                    occaecat cupidatat non proident, sunt in culpa qei officia deser mollit anim id est to laborum sed ut perspiciatis.
+                                </p>
+                                <p align="justify" style="font-size: 15px;">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusod tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ull laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute irure dolor in reprhen voluptate velit esse cillum dolore eu fugiat to nulla pariatur. Excepteur sint
+                                    occaecat cupidatat non proident, sunt in culpa qei officia deser mollit anim id est to laborum sed ut perspiciatis.
+                                </p>
+                            </div>
+                            <div class="shared">
+                                <div class="sharedBox">
+                                    <div class="sharedBox__content">
+                                        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="policyText">
+                                <h4>Cam kết chính hãng</h4>
+                                <p>Cung cấp sản phẩm chính hãng và tốt nhất đến tay khách hàng</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="policyText">
+                                <h4>Giá cả cạnh tranh</h4>
+                                <p>Giá cả hợp lý nhất trên thị trường và trong ngành thiết bị y tế</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="policyText border-none">
+                                <h4>Hỗ trợ trực tuyến 24/7</h4>
+                                <p>Đội ngũ giàu kinh nghiệm sẵn sàng phục vụ quý khách</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__mid">
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <div class="footerBox">
+                                <h2 class="footerBox__title">Giới thiệu</h2>
+                                <div class="footerBox__text">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste mollitia magnam veniam animi!</p>
+                                    <p>
+                                        Địa chỉ: 315 Trường Chinh, Thanh Xuân, Hà Nội <br/>
+                                        Điện thoại: (012) 800 456 789-987 <br/>
+                                        Email: info@gco.vn <br/>
+                                    </p>
+                                </div>
+                                <ul class="social">
+                                    <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="footerBox">
+                                <h2 class="footerBox__title">Danh Mục Sản Phẩm</h2>
+                                <ul class="footerBox__list">
+                                    <li><a href="#">Chăm sóc cá nhân</a></li>
+                                    <li><a href="#">Vật tư tiêu hao</a></li>
+                                    <li><a href="#">Máy móc và thiết bị gia đình</a></li>
+                                    <li><a href="#">Sản phẩm chống dịch</a></li>
+                                    <li><a href="#">Vật tư y tế</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="footerBox">
+                                <h2 class="footerBox__title">Liên Kết Nhanh</h2>
+                                <ul class="footerBox__list">
+                                    <li><a href="#">Giới thiệu</a></li>
+                                    <li><a href="#">Sản phẩm</a></li>
+                                    <li><a href="#">Vật tư y tế gia đình</a></li>
+                                    <li><a href="#">Vật tư BV, PK</a></li>
+                                    <li><a href="#">Tin tức</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <div class="footerBox">
+                                <h2 class="footerBox__title">Đăng ký nhận tin</h2>
+                                <p class="footerBox__register-text">Đăng ký E-mail để cập nhật những tin mới và mã giảm giá.</p>
+                                <form class="registerForm" action="" method="post">
+                                    <input type="text" name="" placeholder="Email của bạn...">
+                                    <button type="button" class="btn btn-send"><i class="fas fa-paper-plane"></i> Đăng ký nhận tin</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">
+            &copy; Bản quyền thuộc về <a href="index.html">Công ty TNHH Thương mại và Kỹ Thuật Minh Phương</a>.
+            <!-- Được thiết kế bởi <a href="#">THWEBSHOP</a> -->
+        </p>
+    </div>
+
+    <!-- jQuery -->
+    <script src="./assets/vendor/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Owl Carousel 2 -->
+    <script src="./assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+    <!--Lazyload -->
+    <script src="./assets/vendor/js/lazyload.min.js"></script>
+    <!-- Script -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
