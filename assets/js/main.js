@@ -92,6 +92,25 @@ $(function() {
         }
     });
 
+    $(".one-product").owlCarousel({
+        loop:true,
+        margin:20,
+        dots:false,
+        autoplay:true,
+        navText : ['<i class="fas fa-angle-left" style="color: #fff;"></i>','<i class="fas fa-angle-right" style="color: #fff;"></i>'],
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            1000:{
+                items:1,
+                nav:true,
+                loop:false
+            }
+        }
+    });
+
     // Lazyload
     var myLazyLoad = new LazyLoad();
     myLazyLoad.update();

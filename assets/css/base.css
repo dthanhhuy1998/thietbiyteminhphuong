@@ -3,6 +3,10 @@
     src: url('../fonts/roboto/Roboto-Bold.ttf');
 }
 @font-face {
+    font-family: 'Roboto-Bold-Condensed';
+    src: url('../fonts/roboto/Roboto-BoldCondensed.ttf');
+}
+@font-face {
     font-family: 'Roboto-Condensed';
     src: url('../fonts/roboto/Roboto-Condensed.ttf');
 }
@@ -17,6 +21,10 @@
 @font-face {
     font-family: 'OpenSans-Regular';
     src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'segeo-ui-bold';
+    src: url('../fonts/segoe-ui/Segoe-UI-Bold.woff');
 }
 
 :root {
