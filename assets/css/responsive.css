@@ -134,4 +134,13 @@
     .data-table li span:first-child {
         width: 100%;
     }
+    .productList .productBox {
+        width: 50%;
+    }
+    .sidebar {
+        margin-top: 25px;
+    }
+    .productList .productBox img {
+        height: 195px;
+    }
 }
